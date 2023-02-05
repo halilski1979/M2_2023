@@ -6,18 +6,33 @@ namespace Demo
     {
         static void Main(string[] args)
         {
-            int[] num = new int[10];
+            int n = int.Parse(Console.ReadLine());
+            var num = new int[n];
+
             for (int i = 0; i < num.Length; i++)
             {
                 Console.Write($"num[{i}]=");
                 num[i] = int.Parse(Console.ReadLine());
             }
 
-            Console.WriteLine("*****************");
-            for (int i = 0; i < num.Length; i++)
+            //string.Join
+            Console.WriteLine(string.Join(",",num));
+            Console.WriteLine("******");
+
+            //Печат for
+            for (int i = 0; i <num.Length; i++)
             {
-                Console.WriteLine($"num[{i}]={num[i]}");
+                Console.WriteLine(num[i]);
             }
+            Console.WriteLine("******");
+
+            //Печат foreach
+           
+            foreach (var item in num)
+            {
+                Console.WriteLine(item);
+            }
+
         }
     }
 }
